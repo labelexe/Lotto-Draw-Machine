@@ -1,10 +1,9 @@
  ![don Pablo](https://donpablonow.github.io/assets/img/signature.png)
+ ![PHP](https://www.craiglotter.co.za/wp-content/uploads/2014/08/php-banner-strip.jpg)
  
 # Lotto Draw Machine
 
-![PHP](https://www.craiglotter.co.za/wp-content/uploads/2014/08/php-banner-strip.jpg)
-
-# Table of Contents
+## Table of Contents
 
   * [Requirements](#📢-requirements)
     * [Single Page](#📋-single-page)
