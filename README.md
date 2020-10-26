@@ -58,7 +58,29 @@ Project design
 
 # 📢 Frameworks
 
-Frameworks used
+# Lumen PHP Framework
+
+Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+
+Symfony2 Rest Api
+
+Symfony is a PHP framework for web and console applications and a set of reusable PHP components. Symfony is used by thousands of web applications (including BlaBlaCar.com and Spotify.com) and most of the popular PHP projects (including Drupal and Magento).
+
+Secured with Json Web Token
+
+Why?
+JSON Web Tokens (JWTs) make it easy to send read-only signed "claims" between services (both internal and external to your app/site). Claims are any bits of data that you want someone else to be able to read and/or verify but not alter.
+
+Note: If that sounds buzz-wordy, don't worry, it will all become clear in the next 5 mins of reading!
+
+What?
+"JSON Web Token (JWT) is a compact URL-safe means of representing claims to be transferred between two parties. The claims in a JWT are encoded as a JSON object that is digitally signed using JSON Web Signature (JWS). ~ IETF
+
+In English
+To identify/authenticate people in your (web/mobile) app, put a standards-based token in the header or url of the page (or API endpoint) which proves the user has logged in and is allowed to access the desired content.
+
+example: https://www.yoursite.com/private-content/?token=eyJ0eXAiOiJKV1Qi.eyJrZXkiOi.eUiabuiKv
+
 
 # 📢 Contact
 
