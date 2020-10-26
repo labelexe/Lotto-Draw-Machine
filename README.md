@@ -14,7 +14,9 @@
     * [CSV File](#📋-csv-file)
     * [OOP](#📋-oop)
   * [Approach](#📢-approach)
-  * [Frameworks](#📢-frameworks)
+    * [Setup](#📢-setup)
+      * [Client](#📢-client)
+      * [Api](#📢-api)
   * [Contact](#📢-contact)
 
 # 📢 Requirements
@@ -56,17 +58,19 @@ Apply to the best of your ability all best practices
 
 Project design
 
-# 📢 Frameworks
+# ⚡ Setup
 
-# Lumen PHP Framework
+Using a Laravel Lumen Front End, with a Symfony Rest API backend  and JSON Web Token for Security.
+
+Laravel Lumen - the Front End Client.
 
 Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
 
-Symfony2 Rest Api
+Symfony2 - the Backend Rest Api
 
 Symfony is a PHP framework for web and console applications and a set of reusable PHP components. Symfony is used by thousands of web applications (including BlaBlaCar.com and Spotify.com) and most of the popular PHP projects (including Drupal and Magento).
 
-Secured with Json Web Token
+Json Web Token - for Security
 
 Why?
 JSON Web Tokens (JWTs) make it easy to send read-only signed "claims" between services (both internal and external to your app/site). Claims are any bits of data that you want someone else to be able to read and/or verify but not alter.
@@ -81,6 +85,13 @@ To identify/authenticate people in your (web/mobile) app, put a standards-based 
 
 example: https://www.yoursite.com/private-content/?token=eyJ0eXAiOiJKV1Qi.eyJrZXkiOi.eUiabuiKv
 
+## 🚧 Client
+
+[Client Setup Guide](wiki/Client)
+
+## 🚧 Api
+
+[API Setup Guide](wiki/API)
 
 # 📢 Contact
 
