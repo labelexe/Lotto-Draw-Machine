@@ -87,11 +87,11 @@ example: https://www.yoursite.com/private-content/?token=eyJ0eXAiOiJKV1Qi.eyJrZX
 
 ## 🚧 Client
 
-[Client Setup Guide](docs/client.md)
+[Client Setup Guide](docs/client)
 
 ## 🚧 Api
 
-[API Setup Guide](docs/api.md)
+[API Setup Guide](docs/api)
 
 # 📢 Contact
 
