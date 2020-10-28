@@ -46,8 +46,8 @@ class AuthenticateWithOkta
             $jwtVerifier = (new \Okta\JwtVerifier\JwtVerifierBuilder())
                             ->setAdaptor(new \Okta\JwtVerifier\Adaptors\SpomkyLabsJose())
                             ->setAudience('api://default')
-                            ->setClientId('0oagk0vssioRGOgqI0h7')
-                            ->setIssuer('https://dev-354685.oktapreview.com/oauth2/default')
+                            ->setClientId('0oagddo26UkgxRp0L5d5')
+                            ->setIssuer('https://auth.obeyi.com/')
                             ->build();
 
             // Verify the JWT from the Authorization Header.

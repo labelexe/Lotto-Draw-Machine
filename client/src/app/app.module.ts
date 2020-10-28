@@ -6,18 +6,18 @@ import { OktaAuthModule, OktaCallbackComponent } from '@okta/okta-angular';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { LottoGameComponent } from './lotto-game/lotto-game.component';
+import { LottoDrawComponent } from './lotto-draw/lotto-draw.component';
 import { ClientFormComponent } from './client-form/client-form.component';
 
 const oktaConfig = {
-  issuer: 'https://dev-354685.oktapreview.com/oauth2/default',
+  issuer: 'https://auth.obeyi.com/',
   redirectUri: 'http://localhost:4200/implicit/callback',
-  clientId: '0oagk0vssioRGOgqI0h7'
+  clientId: '0oagddo26UkgxRp0L5d5'
 };
 
 const routes: Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full' },
-    { path: 'lotto', component: LottoGameComponent },
+    { path: 'lotto', component: LottoDrawComponent },
     { path: 'implicit/callback', component: OktaCallbackComponent },
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
@@ -26,7 +26,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    LottoGameComponent,
+    LottoDrawComponent,
     ClientFormComponent
   ],
   imports: [

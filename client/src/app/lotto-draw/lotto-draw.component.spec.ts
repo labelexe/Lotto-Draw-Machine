@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LottoGameComponent } from './lotto-game.component';
+import { LottoDrawComponent } from './lotto-draw.component';
 
-describe('LottoGameComponent', () => {
-  let component: LottoGameComponent;
-  let fixture: ComponentFixture<LottoGameComponent>;
+describe('LottoDrawComponent', () => {
+  let component: LottoDrawComponent;
+  let fixture: ComponentFixture<LottoDrawComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LottoGameComponent ]
+      declarations: [ LottoDrawComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LottoGameComponent);
+    fixture = TestBed.createComponent(LottoDrawComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

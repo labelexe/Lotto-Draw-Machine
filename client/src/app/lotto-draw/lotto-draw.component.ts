@@ -5,11 +5,11 @@ import { LottoService } from '../lotto.service';
 import 'rxjs/Rx';
 
 @Component({
-  selector: 'app-lotto-game',
-  templateUrl: './lotto-game.component.html',
-  styleUrls: ['./lotto-game.component.css']
+  selector: 'app-lotto-draw',
+  templateUrl: './lotto-draw.component.html',
+  styleUrls: ['./lotto-draw.component.css']
 })
-export class LottoGameComponent implements OnInit {
+export class LottoDrawComponent implements OnInit {
 
     clients: Client[];
     question: any;
