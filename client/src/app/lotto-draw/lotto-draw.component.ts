@@ -12,7 +12,7 @@ import 'rxjs/Rx';
 export class LottoDrawComponent implements OnInit {
 
     clients: Client[];
-    question: any;
+    draw: any;
     errorMessage: string;
     isLoading: boolean = true;
 
@@ -23,7 +23,7 @@ export class LottoDrawComponent implements OnInit {
     async ngOnInit() {
         await this.oktaAuth.getAccessToken();
         this.getClients();
-        this.getQuestion();
+        this.getDraw();
     }
 
     getClients() {
@@ -41,11 +41,11 @@ export class LottoDrawComponent implements OnInit {
             );
     }
 
-    getQuestion() {
+    getDraw() {
         this.lottoService
-            .getQuestion()
+            .getDraw()
             .subscribe(
-                question => this.question = question,
+                draw => this.draw = draw,
                 error => this.errorMessage = <any>error
             );
     }
@@ -101,8 +101,8 @@ export class LottoDrawComponent implements OnInit {
             .answer(id, data)
             .subscribe(
                 response => {
-                    client.answers = response.answers
-                    client.points = response.points
+                    client.results = response.results
+                    client.win = response.win
                     client.isUpdating = false
                 },
                 error => {

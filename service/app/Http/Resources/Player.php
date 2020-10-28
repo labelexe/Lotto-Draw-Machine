@@ -17,8 +17,8 @@ class Client extends JsonResource
         return [
             'id'         => $this->id,
             'name'       => $this->name,
-            'answers'    => (int) $this->answers,
-            'points'     => (int) $this->points,
+            'results'    => (int) $this->results,
+            'win'     => (int) $this->win,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

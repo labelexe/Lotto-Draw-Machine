@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
 export interface Client {
     id: Number,
     name: String,
-    answers: Number,
-    points: Number,
+    results: Number,
+    win: Number,
     isUpdating: boolean
 }
 
@@ -59,7 +59,7 @@ export class ClientService {
     }
 
     answer(id, data): Observable<Client> {
-        return this.http.post(API_URL + '/api/clients/' + id + '/answers', data,
+        return this.http.post(API_URL + '/api/clients/' + id + '/results', data,
             new RequestOptions({ headers: this.headers })
         ).map(res => res.json().data);
     }

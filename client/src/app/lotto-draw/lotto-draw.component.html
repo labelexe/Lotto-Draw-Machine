@@ -7,8 +7,8 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Answers</th>
-                <th>Points</th>
+                <th>Results</th>
+                <th>Win</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -16,8 +16,8 @@
             <tr *ngFor="let client of clients">
                 <td>{{ client.id }}</td>
                 <td>{{ client.name }}</td>
-                <td>{{ client.answers }}</td>
-                <td>{{ client.points }}</td>
+                <td>{{ client.results }}</td>
+                <td>{{ client.win }}</td>
                 <td>
                     <button class="button is-primary" [class.is-loading]="isUpdating(client.id)" (click)="rightAnswer(client.id)">Right (+1)</button>&nbsp;
                     <button class="button is-primary" [class.is-loading]="isUpdating(client.id)" (click)="wrongAnswer(client.id)">Wrong (-1)</button>&nbsp;
@@ -29,20 +29,20 @@
     <app-client-form (clientAdded)="appendClient($event)"></app-client-form>
     </div>
     <div class="column">
-        <div class="card" *ngIf="question?.question">
+        <div class="card" *ngIf="draw?.draw">
           <div class="card-content">
-            <button class="button is-primary" (click)="getQuestion()">Refresh Question</button>
+            <button class="button is-primary" (click)="getDraw()">Refresh Draw</button>
             <p class="title">
-              {{ question.question }}
+              {{ draw.draw }}
             </p>
             <p class="subtitle">
-              {{ question.category.title }}
+              {{ draw.category.title }}
             </p>
           </div>
           <footer class="card-footer">
             <p class="card-footer-item">
                 <span>
-                    Correct answer: {{ question.answer }}
+                    Correct answer: {{ draw.answer }}
                 </span>
             </p>
           </footer>

@@ -16,6 +16,6 @@ use Illuminate\Http\Request;
 Route::get('/clients', 'ClientController@index');
 Route::get('/clients/{id}', 'ClientController@show');
 Route::post('/clients', 'ClientController@store');
-Route::post('/clients/{id}/answers', 'ClientController@answer');
+Route::post('/clients/{id}/results', 'ClientController@answer');
 Route::delete('/clients/{id}', 'ClientController@delete');
-Route::delete('/clients/{id}/answers', 'ClientController@resetAnswers');
+Route::delete('/clients/{id}/results', 'ClientController@resetResults');

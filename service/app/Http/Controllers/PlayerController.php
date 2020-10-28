@@ -40,10 +40,10 @@ class ClientController extends Controller
         ]);
 
         $client = Client::findOrFail($id);
-        $client->answers++;
-        $client->points = ($request->get('correct')
-                           ? $client->points + 1
-                           : $client->points - 1);
+        $client->results++;
+        $client->win = ($request->get('correct')
+                           ? $client->win + 1
+                           : $client->win - 1);
         $client->save();
 
         return new ClientResource($client);
@@ -57,11 +57,11 @@ class ClientController extends Controller
         return response()->json(null, 204);
     }
 
-    public function resetAnswers($id)
+    public function resetResults($id)
     {
         $client = Client::findOrFail($id);
-        $client->answers = 0;
-        $client->points = 0;
+        $client->results = 0;
+        $client->win = 0;
 
         return new ClientResource($client);
     }
