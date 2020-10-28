@@ -88,8 +88,8 @@ php artisan migrate
 Setup a MySQL Database for the project for example:
 
 ```
-CREATE DATABASE LottosDrawMachine CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-GRANT ALL on LottosDrawMachine.* to LottosDrawMachine@127.0.0.1 identified by 'LottosDrawMachine';
+CREATE DATABASE ldm_test CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+GRANT ALL on ldm_test.* to ldm_test@127.0.0.1 identified by 'ldm_test';
 ```
 
 # 🚥 Start the Service:
@@ -104,7 +104,7 @@ php artisan serve
 Expected Results:
 
   * Default Laravel Page: [127.0.0.1:8000](127.0.0.1:8000)
-  * 'Unauthorized' message: [127.0.0.1:8000/api/lottos](127.0.0.1:8000/api/lottos)
+  * 'Unauthorized' message: [127.0.0.1:8000/api/clients](127.0.0.1:8000/api/clients)
 
 Please note that if you are on a virtual machine and NAT, you might need to run the server command instead:
 

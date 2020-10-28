@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OktaAuthService } from '@okta/okta-angular';
 import { Client, ClientService } from '../client.service';
-import { LottoService } from '../lotto.service';
 import 'rxjs/Rx';
 
 @Component({
@@ -17,7 +16,6 @@ export class LottoDrawComponent implements OnInit {
     isLoading: boolean = true;
 
     constructor(private clientService: ClientService,
-                private lottoService: LottoService,
                 private oktaAuth: OktaAuthService) { }
 
     async ngOnInit() {
@@ -42,11 +40,17 @@ export class LottoDrawComponent implements OnInit {
     }
 
     getDraw() {
-        this.lottoService
+            this.clientService
             .getDraw()
             .subscribe(
-                draw => this.draw = draw,
-                error => this.errorMessage = <any>error
+                clients => {
+                    this.clients = clients
+                    this.isLoading = false
+                },
+                error => {
+                    this.errorMessage = <any>error
+                    this.isLoading = false
+                }
             );
     }
 
