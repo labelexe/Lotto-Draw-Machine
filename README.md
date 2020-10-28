@@ -147,7 +147,7 @@ Authentication Powered by Okta, please register via the App if you do not alread
 
 For more information please visit the [Okta Website](https://www.okta.com/) for more information.
 
-My CDN [OBEYi](https://auth.obeyi.com/) is the Security Provider, the CDN and TSL Cerficates are Powered by CloudFlare.
+My CDN [OBEYi](https://auth.obeyi.com/) is the Security Provider, the CDN and TSL Certificates are Powered by CloudFlare.
 
 For more information please visit the [CloudFlare Website](https://www.cloudflare.com/) for more information.
 
