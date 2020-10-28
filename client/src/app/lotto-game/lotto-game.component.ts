@@ -11,26 +11,27 @@ import 'rxjs/Rx';
 })
 export class LottoGameComponent implements OnInit {
 
-    Clients: Client[];
+    clients: Client[];
+    question: any;
     errorMessage: string;
     isLoading: boolean = true;
 
-    constructor(private ClientService: ClientService,
+    constructor(private clientService: ClientService,
                 private lottoService: LottoService,
                 private oktaAuth: OktaAuthService) { }
 
     async ngOnInit() {
         await this.oktaAuth.getAccessToken();
         this.getClients();
-        this.getResults();
+        this.getQuestion();
     }
 
     getClients() {
-        this.ClientService
+        this.clientService
             .getClients()
             .subscribe(
-                Clients => {
-                    this.Clients = Clients
+                clients => {
+                    this.clients = clients
                     this.isLoading = false
                 },
                 error => {
@@ -40,32 +41,73 @@ export class LottoGameComponent implements OnInit {
             );
     }
 
+    getQuestion() {
+        this.lottoService
+            .getQuestion()
+            .subscribe(
+                question => this.question = question,
+                error => this.errorMessage = <any>error
+            );
+    }
+
     findClient(id): Client {
-        return this.Clients.find(Client => Client.id === id);
+        return this.clients.find(client => client.id === id);
     }
 
     isUpdating(id): boolean {
         return this.findClient(id).isUpdating;
     }
 
-    appendClient(Client: Client) {
-        this.Clients.push(Client);
+    appendClient(client: Client) {
+        this.clients.push(client);
     }
 
     deleteClient(id) {
-        let Client = this.findClient(id)
-        Client.isUpdating = true
-        this.ClientService
+        let client = this.findClient(id)
+        client.isUpdating = true
+        this.clientService
             .deleteClient(id)
             .subscribe(
                 response => {
-                    let index = this.Clients.findIndex(Client => Client.id === id)
-                    this.Clients.splice(index, 1)
-                    Client.isUpdating = false
+                    let index = this.clients.findIndex(client => client.id === id)
+                    this.clients.splice(index, 1)
+                    client.isUpdating = false
                 },
                 error => {
                     this.errorMessage = <any>error
-                    Client.isUpdating = false
+                    client.isUpdating = false
+                }
+            );
+    }
+
+    rightAnswer(id) {
+        let data = {
+            correct: true
+        }
+        this.answer(id, data)
+    }
+
+    wrongAnswer(id) {
+        let data = {
+            correct: false
+        }
+        this.answer(id, data)
+    }
+
+    answer(id, data) {
+        let client = this.findClient(id)
+        client.isUpdating = true
+        this.clientService
+            .answer(id, data)
+            .subscribe(
+                response => {
+                    client.answers = response.answers
+                    client.points = response.points
+                    client.isUpdating = false
+                },
+                error => {
+                    this.errorMessage = <any>error
+                    client.isUpdating = false
                 }
             );
     }

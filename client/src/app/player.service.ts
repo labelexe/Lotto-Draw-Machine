@@ -6,6 +6,8 @@ import { Observable } from 'rxjs';
 export interface Client {
     id: Number,
     name: String,
+    answers: Number,
+    points: Number,
     isUpdating: boolean
 }
 
@@ -31,33 +33,33 @@ export class ClientService {
     }
 
     getClients(): Observable<Client[]> {
-        return this.http.get(API_URL + '/api/Clients',
+        return this.http.get(API_URL + '/api/clients',
             new RequestOptions({ headers: this.headers })
         )
         .map(res => {
             let modifiedResult = res.json().data
-            modifiedResult = modifiedResult.map(function(Client) {
-                Client.isUpdating = false;
-                return Client;
+            modifiedResult = modifiedResult.map(function(client) {
+                client.isUpdating = false;
+                return client;
             });
             return modifiedResult;
         });
     }
 
-    addClient(Client): Observable<Client> {
-        return this.http.post(API_URL + '/api/Clients', Client,
+    addClient(client): Observable<Client> {
+        return this.http.post(API_URL + '/api/clients', client,
             new RequestOptions({ headers: this.headers })
         ).map(res => res.json().data);
     }
 
     deleteClient(id): Observable<any> {
-        return this.http.delete(API_URL + '/api/Clients/' + id,
+        return this.http.delete(API_URL + '/api/clients/' + id,
             new RequestOptions({ headers: this.headers })
         );
     }
 
     answer(id, data): Observable<Client> {
-        return this.http.post(API_URL + '/api/Clients/' + id + '/answers', data,
+        return this.http.post(API_URL + '/api/clients/' + id + '/answers', data,
             new RequestOptions({ headers: this.headers })
         ).map(res => res.json().data);
     }

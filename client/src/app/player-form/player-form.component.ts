@@ -1,11 +1,11 @@
 import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
-import { Client, ClientService } from '../Client.service';
+import { Client, ClientService } from '../client.service';
 import 'rxjs/Rx';
 
 @Component({
-    selector: 'app-Client-form',
-    templateUrl: './Client-form.component.html',
-    styleUrls: ['./Client-form.component.css']
+    selector: 'app-client-form',
+    templateUrl: './client-form.component.html',
+    styleUrls: ['./client-form.component.css']
 })
 
 export class ClientFormComponent implements OnInit {
@@ -13,25 +13,25 @@ export class ClientFormComponent implements OnInit {
     errors: string = '';
     isLoading: boolean = false;
 
-    constructor(private ClientService: ClientService) { }
+    constructor(private clientService: ClientService) { }
 
     @Output()
-    ClientAdded: EventEmitter<Client> = new EventEmitter<Client>();
+    clientAdded: EventEmitter<Client> = new EventEmitter<Client>();
 
     ngOnInit() {
     }
 
     addClient(name) {
         this.isLoading = true;
-        this.ClientService
+        this.clientService
             .addClient({
                 name: name
             })
             .subscribe(
-                Client => {
+                client => {
                     this.isLoading = false;
-                    Client.isUpdating = false;
-                    this.ClientAdded.emit(Client);
+                    client.isUpdating = false;
+                    this.clientAdded.emit(client);
                 },
                 error => {
                     this.errors = error.json().message;

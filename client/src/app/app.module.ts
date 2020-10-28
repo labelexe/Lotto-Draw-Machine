@@ -7,12 +7,12 @@ import { OktaAuthModule, OktaCallbackComponent } from '@okta/okta-angular';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LottoGameComponent } from './lotto-game/lotto-game.component';
-import { ClientFormComponent } from './Client-form/Client-form.component';
+import { ClientFormComponent } from './client-form/client-form.component';
 
 const oktaConfig = {
-  issuer: 'https://auth.obeyi.com/',
+  issuer: 'https://dev-354685.oktapreview.com/oauth2/default',
   redirectUri: 'http://localhost:4200/implicit/callback',
-  clientId: '0oagddo26UkgxRp0L5d5'
+  clientId: '0oagk0vssioRGOgqI0h7'
 };
 
 const routes: Routes = [

@@ -1,11 +1,17 @@
 import { Injectable } from '@angular/core';
-import { notImplemented } from '@angular/core/src/render3/util';
+import { Http } from '@angular/http';
+
+const TRIVIA_ENDPOINT: string = 'http://jservice.io/api/random?count=1';
+
 @Injectable({
     providedIn: 'root'
 })
 export class LottoService {
 
-    getResultsn() {
-        return notImplemented; //TODO
+    constructor(private http: Http) { }
+
+    getQuestion() {
+        return this.http.get(TRIVIA_ENDPOINT)
+        .map(res => res.json()[0]);
     }
 }

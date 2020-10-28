@@ -2,7 +2,51 @@
     <div class="column">
     <span class="help is-info" *ngIf="isLoading">Loading...</span>
     <span class="help is-error" *ngIf="errorMessage">{{ errorMessage }}</span>
-    <app-Client-form (ClientAdded)="appendClient($event)"></app-Client-form>
+    <table class="table" *ngIf="!isLoading && !errorMessage">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Answers</th>
+                <th>Points</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let client of clients">
+                <td>{{ client.id }}</td>
+                <td>{{ client.name }}</td>
+                <td>{{ client.answers }}</td>
+                <td>{{ client.points }}</td>
+                <td>
+                    <button class="button is-primary" [class.is-loading]="isUpdating(client.id)" (click)="rightAnswer(client.id)">Right (+1)</button>&nbsp;
+                    <button class="button is-primary" [class.is-loading]="isUpdating(client.id)" (click)="wrongAnswer(client.id)">Wrong (-1)</button>&nbsp;
+                    <button class="button is-primary" [class.is-loading]="isUpdating(client.id)" (click)="deleteClient(client.id)">Delete Client</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <app-client-form (clientAdded)="appendClient($event)"></app-client-form>
+    </div>
+    <div class="column">
+        <div class="card" *ngIf="question?.question">
+          <div class="card-content">
+            <button class="button is-primary" (click)="getQuestion()">Refresh Question</button>
+            <p class="title">
+              {{ question.question }}
+            </p>
+            <p class="subtitle">
+              {{ question.category.title }}
+            </p>
+          </div>
+          <footer class="card-footer">
+            <p class="card-footer-item">
+                <span>
+                    Correct answer: {{ question.answer }}
+                </span>
+            </p>
+          </footer>
+        </div>
     </div>
 </div>
 
