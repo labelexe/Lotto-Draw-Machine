@@ -13,13 +13,13 @@
     * [Disc Storage](#-disc-storage)
     * [CSV File](#-csv-file)
     * [OOP](#-oop)
-  * [Approach](#-approach)
   * [Framework](#-framework)
   * [Installation](#-installation)
   * [Setup Service](#-setup-service)
   * [Start Service](#-start-service)
   * [Setup Client](#-setup-client)
   * [Start Client](#-start-client)
+  * [Authentication](#-authentication)
   * [Contact](#-contact)
 
 # 📢 Requirements
@@ -141,6 +141,16 @@ Please note that if you are on a virtual machine and NAT, you might need to run 
 
 `ng serve --open --host 0.0.0.0`
 
+# 📢 Authentication
+
+Authentication Powered by Okta, please register via the App if you do not already have an Okta account.
+
+For more information please visit the [Okta Website](https://www.okta.com/) for more information.
+
+My CDN [OBEYi](https://auth.obeyi.com/) is the Security Provider, the CDN and TSL Cerficates are Powered by CloudFlare.
+
+For more information please visit the [CloudFlare Website](https://www.cloudflare.com/) for more information.
+
 # 📢 Contact
 
-For more information please contact don Pablo: https://donpablonow.github.io/contact
+For more information please contact don Pablo: [https://donpablonow.github.io/contact](https://donpablonow.github.io/)contact
