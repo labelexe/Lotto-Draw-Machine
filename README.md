@@ -5,20 +5,22 @@
 
 ## Table of Contents
 
-  * [Requirements](#📢-requirements)
-    * [Single Page](#📋-single-page)
-    * [Powerballs](#📋-powerballs)
-    * [Export](#📋-export)
-    * [Play](#📋-display)
-    * [Disc Storage](#📋-disc-storage)
-    * [CSV File](#📋-csv-file)
-    * [OOP](#📋-oop)
-  * [Approach](#📢-approach)
-  * [Framework](#📢-framework)
-  * [Installation](#📢-installation)
-    * [Service](#⚡-setup-service)
-    * [Client](#⚡-setup-client)
-  * [Contact](#📢-contact)
+  * [Requirements](#-requirements)
+    * [Single Page](#-single-page)
+    * [Powerballs](#-powerballs)
+    * [Export](#-export)
+    * [Play](#-display)
+    * [Disc Storage](#-disc-storage)
+    * [CSV File](#-csv-file)
+    * [OOP](#-oop)
+  * [Approach](#-approach)
+  * [Framework](#-framework)
+  * [Installation](#-installation)
+  * [Setup Service](#-setup-service)
+  * [Start Service](#-start-service)
+  * [Setup Client](#-setup-client)
+  * [Start Client](#-start-client)
+  * [Contact](#-contact)
 
 # 📢 Requirements
 
@@ -67,15 +69,77 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# 📢 Installation
+# 🚧 Setup Service
 
-## ⚡ Setup Service
+## Process
 
-## ⚡ Setup Client
+  * Install Project Dependencies
+  * Generate the Project Key
+  * Run the Migrations
+
+Please navigate to `/service/` and run the following commands:
+
+```
+composer install
+php artisan key:generate
+php artisan migrate
+```
+
+Setup a MySQL Database for the project for example:
+
+```
+CREATE DATABASE LottosDrawMachine CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+GRANT ALL on LottosDrawMachine.* to LottosDrawMachine@127.0.0.1 identified by 'LottosDrawMachine';
+```
+
+# 🚥 Start the Service:
+
+Please navigate to `/service/` and run the following command:
+
+```
+php artisan serve
+
+```
+
+Expected Results:
+
+  * Default Laravel Page: [127.0.0.1:8000](127.0.0.1:8000)
+  * 'Unauthorized' message: [127.0.0.1:8000/api/lottos](127.0.0.1:8000/api/lottos)
+
+Please note that if you are on a virtual machine and NAT, you might need to run the server command instead:
+
+```
+`php artisan serve --host 0.0.0.0` .
+```
+
+# 🚧 Setup Client
+
+## Process:
+
+  * Open `/client`
+  * Install the Dependencies
+
+Please navigate to `/client/` and run the following commands:
+
+```
+npm install -g @angular/cli@^6.1
+npm install
+```
 
 Launch the client via [127.0.0.1:4200](127.0.0.1:4200)
+
+# 🚥 Start Client
+
+Please navigate to `/client/` and run the following command:
+
+```
+ng serve --open
+```
+
+Please note that if you are on a virtual machine and NAT, you might need to run the server command instead:
+
+`ng serve --open --host 0.0.0.0`
 
 # 📢 Contact
 
 For more information please contact don Pablo: https://donpablonow.github.io/contact
-
