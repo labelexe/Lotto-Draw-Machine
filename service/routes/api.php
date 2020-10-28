@@ -13,9 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/players', 'PlayerController@index');
-Route::get('/players/{id}', 'PlayerController@show');
-Route::post('/players', 'PlayerController@store');
-Route::post('/players/{id}/answers', 'PlayerController@answer');
-Route::delete('/players/{id}', 'PlayerController@delete');
-Route::delete('/players/{id}/answers', 'PlayerController@resetAnswers');
+Route::get('/clients', 'ClientController@index');
+Route::get('/clients/{id}', 'ClientController@show');
+Route::post('/clients', 'ClientController@store');
+Route::post('/clients/{id}/answers', 'ClientController@answer');
+Route::delete('/clients/{id}', 'ClientController@delete');
+Route::delete('/clients/{id}/answers', 'ClientController@resetAnswers');

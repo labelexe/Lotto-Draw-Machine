@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Player;
+use App\Client;
 use Illuminate\Http\Request;
-use App\Http\Resources\Player as PlayerResource;
-use App\Http\Resources\PlayerCollection;
+use App\Http\Resources\Client as ClientResource;
+use App\Http\Resources\ClientCollection;
 
-class PlayerController extends Controller
+class ClientController extends Controller
 {
     public function index()
     {
-        return new PlayerCollection(Player::all());
+        return new ClientCollection(Client::all());
     }
 
     public function show($id)
     {
-        return new PlayerResource(Player::findOrFail($id));
+        return new ClientResource(Client::findOrFail($id));
     }
 
     public function store(Request $request)
@@ -25,9 +25,9 @@ class PlayerController extends Controller
             'name' => 'required|max:255',
         ]);
 
-        $player = Player::create($request->all());
+        $client = Client::create($request->all());
 
-        return (new PlayerResource($player))
+        return (new ClientResource($client))
                 ->response()
                 ->setStatusCode(201);
     }
@@ -39,30 +39,30 @@ class PlayerController extends Controller
             'correct' => 'required|boolean'
         ]);
 
-        $player = Player::findOrFail($id);
-        $player->answers++;
-        $player->points = ($request->get('correct')
-                           ? $player->points + 1
-                           : $player->points - 1);
-        $player->save();
+        $client = Client::findOrFail($id);
+        $client->answers++;
+        $client->points = ($request->get('correct')
+                           ? $client->points + 1
+                           : $client->points - 1);
+        $client->save();
 
-        return new PlayerResource($player);
+        return new ClientResource($client);
     }
 
     public function delete($id)
     {
-        $player = Player::findOrFail($id);
-        $player->delete();
+        $client = Client::findOrFail($id);
+        $client->delete();
 
         return response()->json(null, 204);
     }
 
     public function resetAnswers($id)
     {
-        $player = Player::findOrFail($id);
-        $player->answers = 0;
-        $player->points = 0;
+        $client = Client::findOrFail($id);
+        $client->answers = 0;
+        $client->points = 0;
 
-        return new PlayerResource($player);
+        return new ClientResource($client);
     }
 }
