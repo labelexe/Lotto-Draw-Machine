@@ -42,11 +42,11 @@
 
 ## 📋 Play
 
-⬛ When the Play button is pressed the correct number of balls are chosen from the ball set and the powerball set, this combination is displayed, showing the balls and powerball(s) if any. 
+✅ When the Play button is pressed the correct number of balls are chosen from the ball set and the powerball set, this combination is displayed, showing the balls and powerball(s) if any. 
 
 ## 📋 Disc Storage
 
-⬛ The last 10 drawn combinations need also be shown on the screen, along with their draws time. The last 100 winning combinations, and their draw times need to be persisted to disk. 
+✅ The last 10 drawn combinations need also be shown on the screen, along with their draws time. The last 100 winning combinations, and their draw times need to be persisted to disk. 
 
 ## 📋 CSV File
 
