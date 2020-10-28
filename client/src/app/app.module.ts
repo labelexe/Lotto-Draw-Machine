@@ -1,7 +1,13 @@
+import Bugsnag from '@bugsnag/js'
+import { BugsnagErrorHandler } from '@bugsnag/plugin-angular'
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core'
 import { Routes, RouterModule } from '@angular/router';
 import { OktaAuthModule, OktaCallbackComponent } from '@okta/okta-angular';
+
+Bugsnag.start({
+  apiKey: '1a3504806211ce1c12360653d390d0ee'
+})
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -33,7 +39,10 @@ const routes: Routes = [
       RouterModule.forRoot(routes),
       OktaAuthModule.initAuth(oktaConfig)
   ],
-  providers: [],
+  providers: [ { provide: ErrorHandler, useFactory: errorHandlerFactory } ],
   bootstrap: [AppComponent]
 })
+export function errorHandlerFactory() {
+  return new BugsnagErrorHandler()
+}
 export class AppModule { }

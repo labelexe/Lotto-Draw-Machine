@@ -20,6 +20,8 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "@bugsnag/js": "^7.5.1",
+    "@bugsnag/plugin-angular": "^7.5.1",
     "@okta/okta-angular": "^1.0.4",
     "bulma": "^0.7.1",
     "core-js": "^2.5.4",
