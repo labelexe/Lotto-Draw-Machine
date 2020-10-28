@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OktaAuthService } from '@okta/okta-angular';
-import { Client, ClientService } from '../Client.service';
+import { Client, ClientService } from '../client.service';
 import { LottoService } from '../lotto.service';
 import 'rxjs/Rx';
 
@@ -22,7 +22,7 @@ export class LottoGameComponent implements OnInit {
     async ngOnInit() {
         await this.oktaAuth.getAccessToken();
         this.getClients();
-        this.getQuestion();
+        this.getResults();
     }
 
     getClients() {
