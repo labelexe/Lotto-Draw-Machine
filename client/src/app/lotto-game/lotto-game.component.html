@@ -1,0 +1,8 @@
+<div class="columns">
+    <div class="column">
+    <span class="help is-info" *ngIf="isLoading">Loading...</span>
+    <span class="help is-error" *ngIf="errorMessage">{{ errorMessage }}</span>
+    <app-Client-form (ClientAdded)="appendClient($event)"></app-Client-form>
+    </div>
+</div>
+
