@@ -5,7 +5,7 @@
 
 ## Table of Contents
 
-  * [Requirements](#-requirements)
+  * [Requirements](#requirements)
     * [Single Page](#-single-page)
     * [Powerballs](#-powerballs)
     * [Export](#-export)
@@ -13,17 +13,17 @@
     * [Disc Storage](#-disc-storage)
     * [CSV File](#-csv-file)
     * [OOP](#-oop)
-  * [Framework](#-framework)
-  * [Installation](#-installation)
-  * [Setup Service](#-setup-service)
-  * [Start Service](#-start-service)
-  * [Setup Client](#-setup-client)
-  * [Start Client](#-start-client)
-  * [Authentication](#-authentication)
-  * [BugSnag Tracking](#-authentication)  
-  * [Contact](#-contact)
+  * [Framework](#framework)
+  * [Installation](#installation)
+  * [Setup Service](#setup-service)
+  * [Start Service](#start-service)
+  * [Setup Client](#setup-client)
+  * [Start Client](#start-client)
+  * [Authentication](#authentication)
+  * [BugSnag Tracking](#bugsnag)  
+  * [Contact](#contact)
 
-# 📢 Requirements
+# Requirements
 
 ## 📋 Single Page
 
@@ -59,19 +59,11 @@
 ⬛ The program needs to be designed as one deems appropriate, other than the draw mechanism itself that needs be done in an OOP style with a primary public method named draw() 
 Apply to the best of your ability all best practices 
 
-# 📢 Framework
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Framework
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-# 🚧 Setup Service
+# Setup Service
 
 ## Process
 
@@ -94,7 +86,7 @@ CREATE DATABASE ldm_test CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 GRANT ALL on ldm_test.* to ldm_test@127.0.0.1 identified by 'ldm_test';
 ```
 
-# 🚥 Start the Service:
+# Start the Service:
 
 Please navigate to `/service/` and run the following command:
 
@@ -114,7 +106,7 @@ Please note that if you are on a virtual machine and NAT, you might need to run 
 `php artisan serve --host 0.0.0.0` .
 ```
 
-# 🚧 Setup Client
+# Setup Client
 
 ## Process:
 
@@ -130,7 +122,7 @@ npm install
 
 Launch the client via [127.0.0.1:4200](127.0.0.1:4200)
 
-# 🚥 Start Client
+# Start Client
 
 Please navigate to `/client/` and run the following command:
 
@@ -142,7 +134,7 @@ Please note that if you are on a virtual machine and NAT, you might need to run 
 
 `ng serve --open --host 0.0.0.0`
 
-# 📢 Authentication
+# Authentication
 
 Authentication Powered by Okta, please register via the App if you do not already have an Okta account.
 
@@ -152,7 +144,7 @@ My CDN [OBEYi](https://auth.obeyi.com/) is the Security Provider, the CDN and TS
 
 For more information please visit the [CloudFlare Website](https://www.cloudflare.com/) for more information.
 
-# 📢 BugSnag
+# BugSnag
 
 Automated error monitoring, reporting, alerting, and diagnostic capture for mobile, web, and backend apps.
 
@@ -164,6 +156,6 @@ We are a full stack stability monitoring solution with best-in-class functionali
 
 For more information please visit the [BugSnag Website](https://www.bugsnag.com/)
 
-# 📢 Contact
+# Contact
 
 For more information please contact don Pablo: [https://donpablonow.github.io/contact](https://donpablonow.github.io/)contact
