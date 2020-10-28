@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lotto-web-client-angular": {
+    "lotto-draw-machine-client": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lotto-web-client-angular",
+            "outputPath": "dist/lotto-draw-machine-client",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -51,18 +51,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "lotto-web-client-angular:build"
+            "browserTarget": "lotto-draw-machine-client:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "lotto-web-client-angular:build:production"
+              "browserTarget": "lotto-draw-machine-client:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lotto-web-client-angular:build"
+            "browserTarget": "lotto-draw-machine-client:build"
           }
         },
         "test": {
@@ -96,7 +96,7 @@
         }
       }
     },
-    "lotto-web-client-angular-e2e": {
+    "lotto-draw-machine-client-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -104,11 +104,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "lotto-web-client-angular:serve"
+            "devServerTarget": "lotto-draw-machine-client:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "lotto-web-client-angular:serve:production"
+              "devServerTarget": "lotto-draw-machine-client:serve:production"
             }
           }
         },
@@ -124,5 +124,5 @@
       }
     }
   },
-  "defaultProject": "lotto-web-client-angular"
+  "defaultProject": "lotto-draw-machine-client"
 }
