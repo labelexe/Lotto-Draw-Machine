@@ -35,6 +35,7 @@
 ## 📋 Export
 
 ✅ The application should be a single page with the buttons being Play button and an Export All button. Explanation: 
+
     ✔️  There are up to [40 to 49] number of balls in a main set of balls. 
     ✔️  There are between [5 to 7] number of balls drawn from the main set. 
     ✔️  There are up to [5 to 49] number of balls in a powerball set. 
