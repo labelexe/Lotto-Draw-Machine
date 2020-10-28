@@ -36,7 +36,11 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['daily'],
+            'channels' => ['single', 'bugsnag'],
+        ],
+
+        'bugsnag' => [
+            'driver' => 'bugsnag',
         ],
 
         'single' => [

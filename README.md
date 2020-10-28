@@ -20,6 +20,7 @@
   * [Setup Client](#-setup-client)
   * [Start Client](#-start-client)
   * [Authentication](#-authentication)
+  * [BugSnag Tracking](#-authentication)  
   * [Contact](#-contact)
 
 # 📢 Requirements
@@ -150,6 +151,18 @@ For more information please visit the [Okta Website](https://www.okta.com/) for 
 My CDN [OBEYi](https://auth.obeyi.com/) is the Security Provider, the CDN and TSL Certificates are Powered by CloudFlare.
 
 For more information please visit the [CloudFlare Website](https://www.cloudflare.com/) for more information.
+
+# 📢 BugSnag
+
+Automated error monitoring, reporting, alerting, and diagnostic capture for mobile, web, and backend apps.
+
+##Balance agility with stability
+
+Bugsnag monitors application stability so you can make data-driven decisions on whether you should be building new features, or fixing bugs.
+‍
+We are a full stack stability monitoring solution with best-in-class functionality for mobile applications.
+
+For more information please visit the [BugSnag Website](https://www.bugsnag.com/)
 
 # 📢 Contact
 
