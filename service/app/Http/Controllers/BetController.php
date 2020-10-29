@@ -2,32 +2,35 @@
 
 namespace App\Http\Controllers;
 
-use App\Client;
+use App\Bet;
 use Illuminate\Http\Request;
-use App\Http\Resources\Client as ClientResource;
-use App\Http\Resources\ClientCollection;
+use App\Http\Resources\Bet as BetResource;
+use App\Http\Resources\BetCollection;
+use Bugsnag\BugsnagLaravel\LaravelLogger;
+use Illuminate\Support\Facades\Log;
 
-class ClientController extends Controller
+class BetController extends Controller
 {
     public function index()
     {
-        return new ClientCollection(Client::all());
+        Log::info('test');
+        return new BetCollection(Bet::all());
     }
 
     public function show($id)
     {
-        return new ClientResource(Client::findOrFail($id));
+        return new BetResource(Bet::findOrFail($id));
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|max:255',
+            'notes' => 'required|max:255',
         ]);
 
-        $client = Client::create($request->all());
+        $bet = Bet::create($request->all());
 
-        return (new ClientResource($client))
+        return (new BetResource($bet))
                 ->response()
                 ->setStatusCode(201);
     }
@@ -41,43 +44,42 @@ class ClientController extends Controller
 
 
     public function draw() {
-        return ["lotto" => ClientController::getResults(range(40,49), rand(5,7)), "powerball" => ClientController::getResults(range(5,49), range(0,3))];
+        return ["lotto" => BetController::getResults(range(40,49), rand(5,7)), "powerball" => BetController::getResults(range(5,49), range(0,3))];
     }
 
-    public function answer($id, Request $request)
+    public function selection($id, Request $request)
     {
         $request->merge(['correct' => (bool) json_decode($request->get('correct'))]);
         $request->validate([
             'correct' => 'required|boolean'
         ]);
 
-        $client = Client::findOrFail($id);
+        $bet = Bet::findOrFail($id);
 
-        $client->results++;
+        $bet->selection++;
 
-        $client->win = ($request->get('correct')
-                           ? $client->win + 1
-                           : $client->win - 1);
+        $bet->win = ($request->get('correct')
+                           ? $bet->win + 1
+                           : $bet->win - 1);
 
-        $client->save();
+        $bet->save();
 
-        return new ClientResource($client);
+        return new BetResource($bet);
     }
 
     public function delete($id)
     {
-        $client = Client::findOrFail($id);
-        $client->delete();
+        $bet = Bet::findOrFail($id);
+        $bet->delete();
 
         return response()->json(null, 204);
     }
 
     public function resetResults($id)
     {
-        $client = Client::findOrFail($id);
-        $client->results = 0;
-        $client->win = 0;
-
-        return new ClientResource($client);
+        $bet = Bet::findOrFail($id);
+        $bet->selection = 0;
+        $bet->win = 0;
+        return new BetResource($bet);
     }
 }

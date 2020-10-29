@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Draw;
+use App\Result;
 use Illuminate\Http\Request;
 
-class DrawController extends Controller
+class ResultController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class DrawController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Draw  $draw
+     * @param  \App\Result  $draw
      * @return \Illuminate\Http\Response
      */
-    public function show(Draw $draw)
+    public function show(Result $draw)
     {
         //
     }
@@ -52,10 +52,10 @@ class DrawController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Draw  $draw
+     * @param  \App\Result  $draw
      * @return \Illuminate\Http\Response
      */
-    public function edit(Draw $draw)
+    public function edit(Result $draw)
     {
         //
     }
@@ -64,10 +64,10 @@ class DrawController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Draw  $draw
+     * @param  \App\Result  $draw
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Draw $draw)
+    public function update(Request $request, Result $draw)
     {
         //
     }
@@ -75,10 +75,10 @@ class DrawController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Draw  $draw
+     * @param  \App\Result  $draw
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Draw $draw)
+    public function destroy(Result $draw)
     {
         //
     }
