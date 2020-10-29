@@ -1,5 +1,5 @@
 {
-  "name": "lotto-draw-machine-client",
+  "name": "lotto-draw-machine-bet",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -22,7 +22,7 @@
     "@angular/router": "^6.1.0",
     "@bugsnag/js": "^7.5.1",
     "@bugsnag/plugin-angular": "^7.5.1",
-    "@okta/okta-angular": "^1.0.4",
+    "@okta/okta-angular": "^1.2.1",
     "bulma": "^0.7.1",
     "core-js": "^2.5.4",
     "rxjs": "6.0.0",

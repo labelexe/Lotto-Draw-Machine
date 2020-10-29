@@ -5,7 +5,7 @@
                 <div class="navbar-menu is-active buttons">
                     <button class="button is-link" [routerLink]="['']">Home</button>
                     <button class="button is-link" *ngIf="isAuthenticated" [routerLink]="['/lotto']">Play</button>
-                    <button class="button is-link" *ngIf="isAuthenticated" [routerLink]="['/lotto']">Export</button>
+                    <button class="button is-link" *ngIf="isAuthenticated" [routerLink]="['/export']">Export</button>
                     <button class="button is-link" *ngIf="!isAuthenticated" (click)="login()"> Login </button>
                     <button class="button is-link" *ngIf="isAuthenticated" (click)="logout()"> Logout </button>
                 </div>

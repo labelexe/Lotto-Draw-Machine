@@ -1,37 +1,37 @@
 import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
-import { Client, ClientService } from '../client.service';
+import { Bet, BetService } from '../bet.service';
 import 'rxjs/Rx';
 
 @Component({
-    selector: 'app-client-form',
-    templateUrl: './client-form.component.html',
-    styleUrls: ['./client-form.component.css']
+    selector: 'app-bet-form',
+    templateUrl: './bet-form.component.html',
+    styleUrls: ['./bet-form.component.css']
 })
 
-export class ClientFormComponent implements OnInit {
+export class BetFormComponent implements OnInit {
 
     errors: string = '';
     isLoading: boolean = false;
 
-    constructor(private clientService: ClientService) { }
+    constructor(private betService: BetService) { }
 
     @Output()
-    clientAdded: EventEmitter<Client> = new EventEmitter<Client>();
+    betAdded: EventEmitter<Bet> = new EventEmitter<Bet>();
 
     ngOnInit() {
     }
 
-    addClient(name) {
+    addBet(note) {
         this.isLoading = true;
-        this.clientService
-            .addClient({
-                name: name
+        this.betService
+            .addBet({
+              note: note
             })
             .subscribe(
-                client => {
+                bet => {
                     this.isLoading = false;
-                    client.isUpdating = false;
-                    this.clientAdded.emit(client);
+                    bet.isUpdating = false;
+                    this.betAdded.emit(bet);
                 },
                 error => {
                     this.errors = error.json().message;

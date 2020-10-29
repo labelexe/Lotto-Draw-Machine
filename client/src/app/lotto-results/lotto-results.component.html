@@ -1,0 +1,51 @@
+<div class="columns">
+    <div class="column">
+    <span class="help is-info" *ngIf="isLoading">Loading...</span>
+    <span class="help is-error" *ngIf="errorMessage">{{ errorMessage }}</span>
+    <table class="table" *ngIf="!isLoading && !errorMessage">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Selections</th>
+                <th>Points</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let bet of bets">
+                <td>{{ bet.id }}</td>
+                <td>{{ bet.notes }}</td>
+                <td>{{ bet.selection }}</td>
+                <td>
+                    <button class="button is-primary" [class.is-loading]="isUpdating(bet.id)" (click)="rightSelection(bet.id)">Right (+1)</button>&nbsp;
+                    <button class="button is-primary" [class.is-loading]="isUpdating(bet.id)" (click)="wrongSelection(bet.id)">Wrong (-1)</button>&nbsp;
+                    <button class="button is-primary" [class.is-loading]="isUpdating(bet.id)" (click)="deleteBet(bet.id)">Delete Bet</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <app-bet-form (betAdded)="appendBet($event)"></app-bet-form>
+    </div>
+    <div class="column">
+        <div class="card" *ngIf="question?.question">
+          <div class="card-content">
+            <button class="button is-primary" (click)="getQuestion()">Refresh Question</button>
+            <p class="title">
+              {{ question.question }}
+            </p>
+            <p class="subtitle">
+              {{ question.category.title }}
+            </p>
+          </div>
+          <footer class="card-footer">
+            <p class="card-footer-item">
+                <span>
+                    Correct selection: {{ question.selection }}
+                </span>
+            </p>
+          </footer>
+        </div>
+    </div>
+</div>
+

@@ -1,7 +1,7 @@
 <span class="help is-danger">{{ errors }}</span>
 <div class="field">
     <div class="control">
-        <input class="input" #clientName (keydown)="errors = ''">
+        <input class="input" #betName (keydown)="errors = ''">
     </div>
 </div>
-<button type="button" class="button is-primary" [class.is-loading]="isLoading" (click)="addClient(clientName.value)">Add Client</button>
+<button type="button" class="button is-primary" [class.is-loading]="isLoading" (click)="addBet(betName.value)">Add Bet</button>
