@@ -15,8 +15,9 @@
     * [OOP](#-oop)
   * [Rest API (PHP)](#setup-service)
   * [Web Client (ng)](#setup-client)
-  * [Authentication](#authentication)
-  * [BugSnag Tracking](#bugsnag)  
+  * [Authentication (OKTA)](#authentication)
+  * [API Documentation (Swagger)](#api-documentation)
+  * [Event Tracking (BugSnag)](#bugsnag)
   * [Contact](#contact)
 
 # Requirements
@@ -153,6 +154,14 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
   My CDN [OBEYi](https://auth.obeyi.com/) is the Security Provider, the CDN and TSL Certificates are Powered by CloudFlare.
 
   For more information please visit the [CloudFlare Website](https://www.cloudflare.com/) for more information.
+
+# API Documentation
+
+The Lotto Draw Machine App has been developed by don Pablo.
+
+Postman: https://documenter.getpostman.com/view/9014424/TVYJ6xFJ
+Swagger: https://app.swaggerhub.com/apis-docs/donPabloNow/LottoDrawMachine/1.0.0
+
 
 # BugSnag
 
