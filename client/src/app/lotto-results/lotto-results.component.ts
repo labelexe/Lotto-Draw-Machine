@@ -4,9 +4,9 @@ import { Bet, BetService } from '../bet.service';
 import 'rxjs/Rx';
 
 @Component({
-  selector: 'app-lotto-draw',
-  templateUrl: './lotto-draw.component.html',
-  styleUrls: ['./lotto-draw.component.css']
+  selector: 'app-lotto-results',
+  templateUrl: './lotto-results.component.html',
+  styleUrls: ['./lotto-results.component.css']
 })
 export class LottoResultComponent implements OnInit {
 

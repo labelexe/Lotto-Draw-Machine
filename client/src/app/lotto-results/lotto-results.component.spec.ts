@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LottoResultComponent } from './lotto-draw.component';
+import { LottoResultComponent } from './lotto-results.component';
 
 describe('LottoResultComponent', () => {
   let component: LottoResultComponent;

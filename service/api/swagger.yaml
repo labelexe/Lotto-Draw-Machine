@@ -1,0 +1,219 @@
+openapi: 3.0.0
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/donPabloNow/LottoDrawMachine/1.0.0
+info:
+  description: The Lotto Draw Machine App has been developted by don Pablo.
+  version: "1.0.0"
+  title: Lotto Draw Machine
+  contact:
+    email: don@obeyi.com
+    url: https://github.com/donPabloNow/Lotto-Draw-Machine
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: results
+    description: Operations specific to the Lottery Results
+  - name: bets
+    description: Operations Specific to Betting
+paths:
+  /results/create:
+      post:
+        tags:
+          - results
+        summary: used to create lottery results
+        operationId: createResults
+        description: add to lottery results database
+        parameters:
+          - in: query
+            name: id
+            description: Unique ID
+            schema:
+              type: integer
+              format: int32
+          - in: query
+            name: notes
+            description: notes related to this result
+            schema:
+              type: string
+          - in: query
+            name: results
+            description: results of the lottery and powerball
+            schema:
+              type: string
+        responses:
+          '200':
+            description: store the results of the lottery and powerball
+            content:
+              application/json:
+                schema:
+                  type: string
+          '400':
+            description: bad input parameter
+  /results/update:
+      put:
+        tags:
+          - results
+        summary: used to store lottery results
+        operationId: resultsUpdate
+        description: add to lottery results database
+        parameters:
+          - in: query
+            name: id
+            description: Unique ID
+            schema:
+              type: integer
+              format: int32
+          - in: query
+            name: notes
+            description: notes related to this result
+            schema:
+              type: string
+          - in: query
+            name: results
+            description: results of the lottery and powerball
+            schema:
+              type: string
+        responses:
+          '200':
+            description: store the results of the lottery and powerball
+            content:
+              application/json:
+                schema:
+                  type: string
+          '400':
+            description: bad input parameter
+  /results/fetch:
+      get:
+        tags:
+          - results
+        summary: used to store lottery results
+        operationId: createUpdateResult
+        description: add to lottery results database
+        parameters:
+          - in: query
+            name: id
+            description: Unique ID
+            schema:
+              type: integer
+              format: int32
+          - in: query
+            name: notes
+            description: notes related to this result
+            schema:
+              type: string
+          - in: query
+            name: results
+            description: results of the lottery and powerball
+            schema:
+              type: string
+        responses:
+          '200':
+            description: store the results of the lottery and powerball
+            content:
+              application/json:
+                schema:
+                  type: string
+          '400':
+            description: bad input parameter
+  /bets/create:
+      post:
+        tags:
+          - bets
+        summary: used to store lottery results
+        operationId: betsCreate
+        description: add to lottery results database
+        parameters:
+          - in: query
+            name: id
+            description: Unique ID
+            schema:
+              type: integer
+              format: int32
+          - in: query
+            name: notes
+            description: notes related to this results
+            schema:
+              type: string
+          - in: query
+            name: results
+            description: results of the lottery and powerball
+            schema:
+              type: string
+        responses:
+          '200':
+            description: store the results of the lottery and powerball
+            content:
+              application/json:
+                schema:
+                  type: string
+          '400':
+            description: bad input parameter
+  /bets/update:
+      put:
+        tags:
+          - bets
+        summary: used to store lottery results
+        operationId: updateResults
+        description: add to lottery results database
+        parameters:
+          - in: query
+            name: id
+            description: Unique ID
+            schema:
+              type: integer
+              format: int32
+          - in: query
+            name: notes
+            description: notes related to this results
+            schema:
+              type: string
+          - in: query
+            name: results
+            description: results of the lottery and powerball
+            schema:
+              type: string
+        responses:
+          '200':
+            description: store the results of the lottery and powerball
+            content:
+              application/json:
+                schema:
+                  type: string
+          '400':
+            description: bad input parameter
+  /bets/fetch:
+    get:
+      tags:
+        - bets
+      summary: used to store lottery results
+      operationId: fetchResults
+      description: add to lottery results database
+      parameters:
+        - in: query
+          name: id
+          description: Unique ID
+          schema:
+            type: integer
+            format: int32
+        - in: query
+          name: notes
+          description: notes related to this results
+          schema:
+            type: string
+        - in: query
+          name: results
+          description: results of the lottery and powerball
+          schema:
+            type: string
+      responses:
+        '200':
+          description: store the results of the lottery and powerball
+          content:
+            application/json:
+              schema:
+                type: string
+        '400':
+          description: bad input parameter

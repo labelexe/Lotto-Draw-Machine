@@ -160,6 +160,7 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 The Lotto Draw Machine App has been developed by don Pablo.
 
 Postman: https://documenter.getpostman.com/view/9014424/TVYJ6xFJ
+
 Swagger: https://app.swaggerhub.com/apis-docs/donPabloNow/LottoDrawMachine/1.0.0
 
 

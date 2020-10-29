@@ -6,7 +6,7 @@ import { OktaAuthModule, OktaCallbackComponent } from '@okta/okta-angular';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { LottoResultComponent } from './lotto-draw/lotto-draw.component';
+import { LottoResultComponent } from './lotto-results/lotto-results.component';
 import { BetFormComponent } from './bet-form/bet-form.component';
 
 const oktaConfig = {
