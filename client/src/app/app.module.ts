@@ -12,7 +12,7 @@ import { BetFormComponent } from './bet-form/bet-form.component';
 const oktaConfig = {
   issuer: 'https://auth.obeyi.com/oauth2/default',
   redirectUri: 'http://localhost:4200/implicit/callback',
-  betId: '0oagnmd090CN3goRb5d5'
+  clientId: '0oagnmd090CN3goRb5d5'
 };
 
 const routes: Routes = [

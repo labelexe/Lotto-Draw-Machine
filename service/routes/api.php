@@ -13,9 +13,14 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::group([
+    'prefix'     => 'api/v1/',
+    'middleware' => 'cors'
+], function() {
     Route::get('/bets', 'BetController@index');
     Route::get('/bets/{id}', 'BetController@show');
     Route::post('/bets', 'BetController@store');
     Route::post('/bets/{id}/selection', 'BetController@selection');
     Route::delete('/bets/{id}', 'BetController@delete');
     Route::delete('/bets/{id}/selection', 'BetController@resetResults');
+});

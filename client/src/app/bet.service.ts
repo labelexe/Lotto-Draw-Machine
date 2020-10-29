@@ -10,7 +10,7 @@ export interface Bet {
     isUpdating: boolean
 }
 
-const API_URL: string = 'http://localhost:8000';
+const API_URL: string = 'http://localhost:8000/api/v1/';
 
 @Injectable({
   providedIn: 'root'
