@@ -27,25 +27,5 @@
     </table>
     <app-bet-form (betAdded)="appendBet($event)"></app-bet-form>
     </div>
-    <div class="column">
-        <div class="card" *ngIf="question?.question">
-          <div class="card-content">
-            <button class="button is-primary" (click)="getQuestion()">Refresh Question</button>
-            <p class="title">
-              {{ question.question }}
-            </p>
-            <p class="subtitle">
-              {{ question.category.title }}
-            </p>
-          </div>
-          <footer class="card-footer">
-            <p class="card-footer-item">
-                <span>
-                    Correct selection: {{ question.selection }}
-                </span>
-            </p>
-          </footer>
-        </div>
-    </div>
 </div>
 

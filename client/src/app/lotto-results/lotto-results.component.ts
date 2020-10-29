@@ -11,7 +11,6 @@ import 'rxjs/Rx';
 export class LottoResultComponent implements OnInit {
 
     bets: Bet[];
-    question: any;
     errorMessage: string;
     isLoading: boolean = true;
 
@@ -21,7 +20,6 @@ export class LottoResultComponent implements OnInit {
     async ngOnInit() {
         await this.oktaAuth.getAccessToken();
         this.getBets();
-        this.getQuestion();
     }
 
     getBets() {
@@ -36,15 +34,6 @@ export class LottoResultComponent implements OnInit {
                     this.errorMessage = <any>error
                     this.isLoading = false
                 }
-            );
-    }
-
-    getQuestion() {
-        this.lottoService
-            .getQuestion()
-            .subscribe(
-                question => this.question = question,
-                error => this.errorMessage = <any>error
             );
     }
 
