@@ -1,1 +1,6 @@
 .vscode
+bet/go.cmd
+bet/yarn.lock
+client/go.cmd
+client/yarn.lock
+service/yarn.lock

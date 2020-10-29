@@ -13,12 +13,8 @@
     * [Disc Storage](#-disc-storage)
     * [CSV File](#-csv-file)
     * [OOP](#-oop)
-  * [Framework](#framework)
-  * [Installation](#installation)
-  * [Setup Service](#setup-service)
-  * [Start Service](#start-service)
-  * [Setup Client](#setup-client)
-  * [Start Client](#start-client)
+  * [Rest API (PHP)](#setup-service)
+  * [Web Client (ng)](#setup-client)
   * [Authentication](#authentication)
   * [BugSnag Tracking](#bugsnag)  
   * [Contact](#contact)
@@ -44,20 +40,34 @@
 
   ## 📋 Play
 
-  ✅ When the Play button is pressed the correct number of balls are chosen from the ball set and the powerball set, this combination is displayed, showing the balls and powerball(s) if any. 
+  ✅ When the Play button is pressed.
+  
+      ✔️  The correct number of balls are chosen from the ball set
+      ✔️  The powerball set, this combination is displayed
+      ✔️  Showing the balls and powerball(s) if any. 
 
   ## 📋 Disc Storage
 
-  ✅ The last 10 drawn combinations need also be shown on the screen, along with their draws time. The last 100 winning combinations, and their draw times need to be persisted to disk. 
+  ✅ The last 10 drawn combinations need also be shown on the screen
+
+      ✔️  along with their draws time
+      ✔️  The last 100 winning combinations
+      ✔️  and their draw times need to be persisted to disk. 
 
   ## 📋 CSV File
 
-  ⬛ When Export All is pressed then all the previous drawn combinations from the persistence store are presented to the user as a CSV file. 
+  ✅ When Export All is pressed then 
+  
+      ✔️  All the previous drawn combinations from the persistence store
+      ✔️  presented to the user as a CSV file. 
 
   ## 📋 OOP
 
-  ⬛ The program needs to be designed as one deems appropriate, other than the draw mechanism itself that needs be done in an OOP style with a primary public method named draw() 
-  Apply to the best of your ability all best practices 
+  ✅ The program needs to be designed as one deems appropriate.
+
+      ✔️  Other than the draw mechanism itself that needs be done in an OOP style
+      ✔️  with a primary public method named draw() 
+      ✔️  Apply to the best of your ability all best practices 
 
 # Framework
 
@@ -98,7 +108,7 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
   Expected Results:
 
     * Default Laravel Page: [127.0.0.1:8000](127.0.0.1:8000)
-    * 'Unauthorized' message: [127.0.0.1:8000/api/clients](127.0.0.1:8000/api/clients)
+    * 'Unauthorized' message: [127.0.0.1:8000/api/bets](127.0.0.1:8000/api/bets)
 
   Please note that if you are on a virtual machine and NAT, you might need to run the server command instead:
 
@@ -106,7 +116,7 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
   `php artisan serve --host 0.0.0.0` .
   ```
 
-# Setup Client
+# Setup Bet
 
   ## Process:
 
@@ -122,7 +132,7 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
   Launch the client via [127.0.0.1:4200](127.0.0.1:4200)
 
-# Start Client
+# Angular Client App
 
   Please navigate to `/client/` and run the following command:
 
