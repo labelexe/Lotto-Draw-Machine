@@ -1,4 +1,5 @@
- ![don Pablo](https://donpablonow.github.io/assets/img/signature.png)
+ <p align="center"><i><b>TO MAKE A SMALL DONATION PLEASE VISIT:</b> <a href="https://www.patreon.com/donPabloNow">PATREON.COM/DONPABLONOW</a></i></p><blockquote><p> ⛔️ <b>ARCHIVE PENDING</b>: This endeavour is likely to fail owing to a lack of support. If you find this project interesting, please support it by smashing the "star" button. If the project receives at some interest work on the project will continue.</p></blockquote></br><a href="https://www.donPabloNow.com/#notice"><img src="https://www.donPabloNow.com/notice.wepd"/></a></br></br>
+ 
  ![PHP](https://www.craiglotter.co.za/wp-content/uploads/2014/08/php-banner-strip.jpg)
  
 # Lotto Draw Machine
