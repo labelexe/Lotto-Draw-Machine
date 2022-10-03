@@ -23,7 +23,7 @@
     "@bugsnag/js": "^7.17.0",
     "@bugsnag/plugin-angular": "^7.17.4",
     "@okta/okta-angular": "^1.2.1",
-    "bulma": "^0.7.1",
+    "bulma": "^0.9.4",
     "core-js": "^2.5.4",
     "rxjs": "6.0.0",
     "rxjs-compat": "6.3.3",
