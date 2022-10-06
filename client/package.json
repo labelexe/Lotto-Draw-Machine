@@ -24,7 +24,7 @@
     "@bugsnag/plugin-angular": "^7.17.4",
     "@okta/okta-angular": "^1.2.1",
     "bulma": "^0.9.4",
-    "core-js": "^2.5.4",
+    "core-js": "^2.6.12",
     "rxjs": "6.6.7",
     "rxjs-compat": "6.6.7",
     "zone.js": "~0.11.8"
